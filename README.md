@@ -2,7 +2,7 @@
 ## 数据来源
 > 使用聚合数据的api接口请求数据
 ## 数据保存
-> 暂时保存到本地的mysql数据库中
+> 暂时保存到本地的mysql数据库中,目前已经保存到服务器上的mysql数据库。
 ## 接口介绍
 1. getProvinceListFromDisk()
 > 获取所有省，返回List
