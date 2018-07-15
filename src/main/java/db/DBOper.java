@@ -68,6 +68,8 @@ public class DBOper {
                     //5.3 执行sql语句
                     state.executeUpdate(sql);
                 }
+            } else{
+                System.out.println("city表中已经存在数据.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
