@@ -37,9 +37,9 @@ public class DBCon {
         }
 
         driver = "com.mysql.jdbc.Driver";
-        url = properties.getProperty("url2");
-        user = properties.getProperty("user2");
-        password = properties.getProperty("password2");
+        url = properties.getProperty("url");
+        user = properties.getProperty("user");
+        password = properties.getProperty("password");
 
         try {
             Class.forName(driver);
