@@ -8,8 +8,9 @@ import java.util.List;
 /**
  * Created by Asus- on 2018/7/13.
  */
-/*
- * 封装的GSON解析工具类，提供泛型参数
+
+/**
+ * 封装的Gson解析工具类，提供泛型参数
  */
 public class GsonUtil {
     // 将Json数据解析成相应的映射对象

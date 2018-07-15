@@ -31,7 +31,7 @@ public class WeatherApi {
      *
      * @return
      */
-    public List<CityBean.Result> getCityResult() {
+    public List<CityBean.Result> getCityResultFromNet() {
         //拼接url
         String realUrl = requestUrl + "?key=" + key;
         //创建okhttp客户端
@@ -54,5 +54,10 @@ public class WeatherApi {
         }
         return mList;
     }
+
+    /**
+     * 通过网络请求获取城市的天气信息
+     */
+    //public
 }
 
