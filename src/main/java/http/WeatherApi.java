@@ -2,6 +2,7 @@ package http;
 
 import bean.CityBean;
 import bean.FutureWeather;
+import bean.TodayWeather;
 import bean.WeatherBean;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
@@ -10,6 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -63,7 +65,8 @@ public class WeatherApi {
     /**
      * 通过网络请求获取城市的天气信息
      */
-    public void getCityWeatherFromNet(String cityName) {
+    public String getCityWeatherFromNet(String cityName) {
+        String data = null;
         //拼接url
         String realUrl = requestWeatherUrl
                 + "?cityname=" + cityName
@@ -75,53 +78,15 @@ public class WeatherApi {
         Request request = new Request.Builder()
                 .url(realUrl)
                 .build();
-        Response response = null;
+        Response response;
         try {
             response = client.newCall(request).execute();
             //得到json数据
-            String data = response.body().string();
-            //解析json
-            parsingJson(data);
+            data = response.body().string();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return data;
     }
-
-    /**
-     * 解析Json数据
-     *
-     * @param data
-     */
-    private void parsingJson(String data) {
-
-        JsonObject jsonObject = new JsonParser().parse(data).getAsJsonObject();
-        int errorCode = jsonObject.get("error_code").getAsInt();
-        System.out.println("errorCode = " + errorCode);
-        if (errorCode == 0) {
-            JsonObject jsonResult = jsonObject.getAsJsonObject("result");
-            //实时天气
-            JsonObject skJson = jsonResult.getAsJsonObject("sk");
-            String temp = skJson.get("temp").getAsString();
-            System.out.println("temp = " + temp);
-            //今日天气
-            JsonObject todayJson = jsonResult.getAsJsonObject("today");
-            String weather = todayJson.get("weather").getAsString();
-            System.out.println("weather = " + weather);
-            //未来天气
-            JsonArray jsonFutureElements = jsonResult.getAsJsonArray("future");
-//            System.out.println(jsonFutureElements);
-            //循环遍历
-            for (JsonElement futureWeatherEle : jsonFutureElements) {
-                //通过反射 得到UserBean.class
-                FutureWeather futureWeather = new Gson().fromJson(futureWeatherEle, new TypeToken<FutureWeather>() {
-                }.getType());
-                System.out.println("futureWeather weather = " + futureWeather.getWeather());
-            }
-        } else {
-            System.out.println("查询失败!");
-        }
-
-    }
-
 }
 
