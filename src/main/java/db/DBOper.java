@@ -63,23 +63,25 @@ public class DBOper {
         String day = now.get(Calendar.DAY_OF_MONTH) + "日";
         String today = year + month + day;
         boolean isUpdate = true;
-        while (resultSet.next()){
+        //判断数据库中是否含有当前天的天气信息，包括今天天气和未来天气数据
+        while (resultSet.next()) {
             String daytime = resultSet.getString("daytime");
-            if (daytime.contains(today)){
+            if (daytime.contains(today)) {
                 isUpdate = false;
                 break;
             }
         }
-        //没有数据，需要更新
-        if (isUpdate){
+        //没有当前天的数据，需要联网更新
+        if (isUpdate) {
             //获取主要城市列表
             List<String> cities = new ArrayList<String>();
             cities.add("珠海");
             cities.add("北京");
             cities.add("广州");
             cities.add("深圳");
-            for (String c : cities){
+            for (String c : cities) {
                 String data = weatherApi.getCityWeatherFromNet(c);
+                //解析数据
                 parsingJson(data);
                 //开始插入数据到数据库
                 //插入今日天气数据
@@ -94,7 +96,7 @@ public class DBOper {
                 String maxTemperature = todayWeather.getMaxTemperature();
                 //风
                 String wind = todayWeather.getWind();
-                //日期
+                //当前日期
                 String date_y = todayWeather.getDate_y();
                 //穿衣建议
                 String dressing_advice = todayWeather.getDressing_advice();
@@ -111,15 +113,38 @@ public class DBOper {
                 statement.executeUpdate(todaySql);
                 //插入未来天气数据
                 //遍历七天天气
-                for (FutureWeather futureWeather : futureWeatherList){
-                    futureWeather.getWeather();
-                    futureWeather.getDate();
-                    futureWeather.getTemperature();
-                    futureWeather.getWeek();
-                    futureWeather.getWind();
+                for (FutureWeather futureWeather : futureWeatherList) {
+                    //当前日期
+                    //天气
+                    String fWeather = futureWeather.getWeather();
+                    //未来日期
+                    String fDay = futureWeather.getDate();
+                    //温度
+                    String fTemp = futureWeather.getTemperature();
+//                    //星期几
+//                    String week = futureWeather.getWeek();
+                    //风
+                    String fWind = futureWeather.getWind();
+                    String[] fTemps = fTemp.split("~");
+                    //最低气温
+                    String fMinTemp = fTemps[0];
+                    //最高气温
+                    String fMaxTemp = fTemps[1];
+                    //1)拼接sql语句
+                    String futureSql = "insert into futureweather values("
+                            + "\'" + city + "\'" + ","
+                            + "\'" + date_y + "\'" + ","
+                            + "\'" + fDay + "\'" + ","
+                            + "\'" + fMinTemp + "\'" + ","
+                            + "\'" + fMaxTemp + "\'" + ","
+                            + "\'" + fWeather + "\'" + ","
+                            + "\'" + fWind + "\'" + ","
+                            + ")";   //SQL语句
+                    //2)执行sql语句
+                    statement.executeUpdate(futureSql);
                 }
             }
-        }else {
+        } else {
             System.out.println("已经有当天的天气信息~");
         }
     }
@@ -170,7 +195,7 @@ public class DBOper {
             JsonArray jsonFutureElements = jsonResult.getAsJsonArray("future");
 //            System.out.println(jsonFutureElements);
             //如果列表不为空，先清空
-            if (!futureWeatherList.isEmpty()){
+            if (!futureWeatherList.isEmpty()) {
                 futureWeatherList.clear();
             }
             //循环遍历
@@ -355,7 +380,7 @@ public class DBOper {
             //2.创建Statement容器
             statement = connection.createStatement();
             List<String> provinceList = getProvinceListFromDisk();
-            if (province != null && provinceList.contains(province)){
+            if (province != null && provinceList.contains(province)) {
                 //3.查询数据库数据
                 String querySql = "select DISTINCT city from city WHERE province = "
                         + "\'" + province + "\'";
@@ -455,14 +480,14 @@ public class DBOper {
             //3.查询数据库数据
             for (String p : provinceList) {
                 List<String> cityList = getCityListFromDisk(p);
-                for (String c : cityList){
+                for (String c : cityList) {
                     allCityList.add(c);
                 }
             }
             //2.创建Statement容器
             statement = connection.createStatement();
 
-            if (city != null && allCityList.contains(city)){
+            if (city != null && allCityList.contains(city)) {
                 //3.查询数据库数据
                 String querySql = "select district from city WHERE city = "
                         + "\'" + city + "\'";
@@ -470,7 +495,7 @@ public class DBOper {
                 while (resultSet.next()) {
                     districtList.add(resultSet.getString("district"));
                 }
-            }else {
+            } else {
                 throw new Exception("不存在这个城市!");
             }
         } catch (SQLException e) {
