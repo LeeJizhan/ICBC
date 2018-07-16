@@ -1,4 +1,5 @@
 import db.DBOper;
+import http.WeatherApi;
 
 import java.util.List;
 import java.util.Map;
@@ -10,17 +11,19 @@ public class Main {
     int count = 0;
     public static void main(String[] args) {
         Main m = new Main();
-        DBOper dbOper = new DBOper();
+        WeatherApi weatherApi = new WeatherApi();
+        weatherApi.getCityWeatherFromNet("珠海");
+        //DBOper dbOper = new DBOper();
 
 //        Map<String, List<String>> cityMap = dbOper.getCityMapListFromDisk();
 //        Map<String, List<String>> districtMap = dbOper.getDistrictMapListFromDisk();
 //        m.printMap(cityMap);
 //        m.printMap(districtMap);
 
-        List<String> cityList = dbOper.getCityListFromDisk("广东");
-        List<String> districtList = dbOper.getDistrictListFromDisk("珠海");
-        m.printList(cityList);
-        m.printList(districtList);
+//        List<String> cityList = dbOper.getCityListFromDisk("广东");
+//        List<String> districtList = dbOper.getDistrictListFromDisk("珠海");
+//        m.printList(cityList);
+//        m.printList(districtList);
     }
 
     private void printList(List<String> cityList) {
