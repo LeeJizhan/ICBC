@@ -22,7 +22,7 @@ public class DBOper {
     private List<CityBean.Result> cityResult;
     private DBCon dbCon;
     private Connection connection;
-    private TodayWeather todayWeather;
+    private TodayWeather todayWeather = new TodayWeather();
     private List<FutureWeather> futureWeatherList = new ArrayList<FutureWeather>();
 
     public DBOper() {
@@ -59,21 +59,37 @@ public class DBOper {
         //获取当前的日期
         Calendar now = Calendar.getInstance();
         String year = now.get(Calendar.YEAR) + "年";
-        String month = (now.get(Calendar.MONTH) + 1) + "月";
+        String month;
+        if ((now.get(Calendar.MONTH) + 1) < 10 && (now.get(Calendar.MONTH) + 1) > 0){
+             month = "0" + (now.get(Calendar.MONTH) + 1) + "月";
+        }else {
+            month = (now.get(Calendar.MONTH) + 1) + "月";
+        }
+
         String day = now.get(Calendar.DAY_OF_MONTH) + "日";
         String today = year + month + day;
         boolean isUpdate = true;
         //判断数据库中是否含有当前天的天气信息，包括今天天气和未来天气数据
         while (resultSet.next()) {
             String daytime = resultSet.getString("daytime");
+            System.out.println(daytime + "  " + today);
             if (daytime.contains(today)) {
                 isUpdate = false;
                 break;
             }
         }
+        System.out.println(isUpdate);
         //没有当前天的数据，需要联网更新
         if (isUpdate) {
+            //获取所有城市
+            //String getAllCitySql = "SELECT DISTINCT city FROM city";
+            //ResultSet cityResultSet = statement.executeQuery(getAllCitySql);
+            //获取所有区县
+            //String getAllDistrictSql = "SELECT district FROM city";
+            //ResultSet districtResultSet = statement.executeQuery(getAllDistrictSql);
             //获取主要城市列表
+
+            //API调用次数不够，暂时只做以下4个城市的数据。
             List<String> cities = new ArrayList<String>();
             cities.add("珠海");
             cities.add("北京");
@@ -133,19 +149,20 @@ public class DBOper {
                     //1)拼接sql语句
                     String futureSql = "insert into futureweather values("
                             + "\'" + city + "\'" + ","
-                            + "\'" + date_y + "\'" + ","
                             + "\'" + fDay + "\'" + ","
                             + "\'" + fMinTemp + "\'" + ","
                             + "\'" + fMaxTemp + "\'" + ","
-                            + "\'" + fWeather + "\'" + ","
+                            + "\'" + date_y + "\'" + ","
                             + "\'" + fWind + "\'" + ","
+                            + "\'" + fWeather + "\'"
                             + ")";   //SQL语句
                     //2)执行sql语句
                     statement.executeUpdate(futureSql);
+                    System.out.println("天气信息更新成功!");
                 }
             }
         } else {
-            System.out.println("已经有当天的天气信息~");
+            System.out.println("已经有当天的天气信息，请放心使用。");
         }
     }
 

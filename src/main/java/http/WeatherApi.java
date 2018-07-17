@@ -1,17 +1,12 @@
 package http;
 
 import bean.CityBean;
-import bean.FutureWeather;
-import bean.TodayWeather;
-import bean.WeatherBean;
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
