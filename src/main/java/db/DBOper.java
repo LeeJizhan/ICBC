@@ -7,10 +7,7 @@ import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import http.WeatherApi;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.*;
 
 /**
@@ -38,7 +35,7 @@ public class DBOper {
         /**
          * 将今日天气和未来天气数据到数据库
          * 1.连接数据库
-         * 2.创建Statement容器
+         * 2.创建PreparedStatement容器
          * 3.查询数据库数据
          * 4.判断是否是今天的天气数据，若是，不更新；若不是，从网络上获取更新，更新数据库
          * 5.更新数据库
@@ -50,24 +47,25 @@ public class DBOper {
          * 6.关闭数据库的连接
          */
         //1.连接数据库
-        Connection connection = dbCon.getConnection();
+//        Connection connection = dbCon.getConnection();
+        connection.setAutoCommit(false);
         //2.创建Statement容器
-        Statement statement = connection.createStatement();
+        PreparedStatement preparedStatement = connection.prepareStatement("");
         //3.获取数据库中的日期
         String querySql = "SELECT DISTINCT daytime FROM todayweather";
-        ResultSet resultSet = statement.executeQuery(querySql);
+        ResultSet resultSet = preparedStatement.executeQuery(querySql);
         //获取当前的日期
         Calendar now = Calendar.getInstance();
         String year = now.get(Calendar.YEAR) + "年";
         String month;
-        if ((now.get(Calendar.MONTH) + 1) < 10 && (now.get(Calendar.MONTH) + 1) > 0){
-             month = "0" + (now.get(Calendar.MONTH) + 1) + "月";
-        }else {
+        if ((now.get(Calendar.MONTH) + 1) < 10 && (now.get(Calendar.MONTH) + 1) > 0) {
+            month = "0" + (now.get(Calendar.MONTH) + 1) + "月";
+        } else {
             month = (now.get(Calendar.MONTH) + 1) + "月";
         }
-
         String day = now.get(Calendar.DAY_OF_MONTH) + "日";
         String today = year + month + day;
+
         boolean isUpdate = true;
         //判断数据库中是否含有当前天的天气信息，包括今天天气和未来天气数据
         while (resultSet.next()) {
@@ -78,7 +76,6 @@ public class DBOper {
                 break;
             }
         }
-        System.out.println(isUpdate);
         //没有当前天的数据，需要联网更新
         if (isUpdate) {
             //获取所有城市
@@ -89,13 +86,16 @@ public class DBOper {
             //ResultSet districtResultSet = statement.executeQuery(getAllDistrictSql);
             //获取主要城市列表
 
-            //API调用次数不够，暂时只做以下4个城市的数据。
+            //API调用次数不够，暂时只做以下5个城市的数据。
             List<String> cities = new ArrayList<String>();
             cities.add("珠海");
             cities.add("北京");
             cities.add("上海");
             cities.add("广州");
             cities.add("深圳");
+            String preSqlToday = "insert into todayweather(city,daytime,mintemp,maxtemp,weather,wind,description) values";
+            String preSqlFuture = "insert into futureweather(city,daytime,mintemp,maxtemp,todaytime,wind,weather) values";
+            StringBuffer sbToday = new StringBuffer();
             for (String c : cities) {
                 String data = weatherApi.getCityWeatherFromNet(c);
                 //解析数据
@@ -117,7 +117,8 @@ public class DBOper {
                 String date_y = todayWeather.getDate_y();
                 //穿衣建议
                 String dressing_advice = todayWeather.getDressing_advice();
-                String todaySql = "insert into todayweather values("
+                //SQL语句
+                String todaySql = "("
                         + "\'" + city + "\'" + ","
                         + "\'" + date_y + "\'" + ","
                         + "\'" + minTemperature + "\'" + ","
@@ -125,11 +126,12 @@ public class DBOper {
                         + "\'" + weather + "\'" + ","
                         + "\'" + wind + "\'" + ","
                         + "\'" + dressing_advice + "\'"
-                        + ")";   //SQL语句
-                //2)执行sql语句
-                statement.executeUpdate(todaySql);
+                        + "),";
+                //2)添加sql语句
+                sbToday.append(todaySql);
                 //插入未来天气数据
                 //遍历七天天气
+                StringBuffer sbFuture = new StringBuffer();
                 for (FutureWeather futureWeather : futureWeatherList) {
                     //当前日期
                     //天气
@@ -148,7 +150,7 @@ public class DBOper {
                     //最高气温
                     String fMaxTemp = fTemps[1];
                     //1)拼接sql语句
-                    String futureSql = "insert into futureweather values("
+                    String futureSql = "("
                             + "\'" + city + "\'" + ","
                             + "\'" + fDay + "\'" + ","
                             + "\'" + fMinTemp + "\'" + ","
@@ -156,12 +158,20 @@ public class DBOper {
                             + "\'" + date_y + "\'" + ","
                             + "\'" + fWind + "\'" + ","
                             + "\'" + fWeather + "\'"
-                            + ")";   //SQL语句
-                    //2)执行sql语句
-                    statement.executeUpdate(futureSql);
-                    System.out.println("天气信息更新成功!");
+                            + "),";   //SQL语句
+                    //2)添加sql语句
+                    sbFuture.append(futureSql);
                 }
+                String futureSql = preSqlFuture + sbFuture.substring(0, sbFuture.length() - 1);
+                preparedStatement.addBatch(futureSql);
+                //preparedStatement.executeBatch();
             }
+            String todaySql = preSqlToday + sbToday.substring(0, sbToday.length() - 1);
+            preparedStatement.addBatch(todaySql);
+            preparedStatement.executeBatch();
+            connection.commit();
+            preparedStatement.close();
+            System.out.println("天气信息更新成功!");
         } else {
             System.out.println("已经有当天的天气信息，请放心使用。");
         }
@@ -176,7 +186,6 @@ public class DBOper {
 
         JsonObject jsonObject = new JsonParser().parse(data).getAsJsonObject();
         int errorCode = jsonObject.get("error_code").getAsInt();
-        System.out.println("errorCode = " + errorCode);
         if (errorCode == 0) {
             JsonObject jsonResult = jsonObject.getAsJsonObject("result");
 //            //实时天气
