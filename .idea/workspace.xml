@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7571c0-0f32-490b-a351-13c6a9d6a776" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/utils/ProduceGPS.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/utils/ProduceGPS.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/DBOper.java" afterPath="$PROJECT_DIR$/src/main/java/db/DBOper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,32 +27,34 @@
       <file leaf-file-name="WeatherApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/http/WeatherApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
+            <state relative-caret-position="560">
               <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBOper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBOper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/db/DBOper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+            <state relative-caret-position="141">
+              <caret line="187" column="64" lean-forward="false" selection-start-line="187" selection-start-column="64" selection-end-line="187" selection-end-column="64" />
               <folding>
-                <marker date="1531965795660" expanded="true" signature="1483:1524" ph="SELECT DISTI... todayweather" />
-                <marker date="1531965795660" expanded="true" signature="2565:2595" ph="SELECT DISTI... city" />
-                <marker date="1531965795660" expanded="true" signature="2740:2765" ph="SELECT distr... city" />
-                <marker date="1531965795660" expanded="true" signature="4014:4463" ph="insert into todayweather... " />
-                <marker date="1531965795660" expanded="true" signature="5428:5889" ph="insert into futureweather... " />
-                <marker date="1531965795660" expanded="true" signature="9221:9239" ph="select * fro... city" />
-                <marker date="1531965795660" expanded="true" signature="9874:10152" ph="insert into city... " />
-                <marker date="1531965795660" expanded="true" signature="11171:11205" ph="select DISTI... city" />
-                <marker date="1531965795660" expanded="true" signature="12657:12736" ph="select DISTI... city" />
-                <marker date="1531965795660" expanded="true" signature="12657:12747" ph="select DISTI... city" />
-                <marker date="1531965795660" expanded="true" signature="14102:14199" ph="select DISTI... city" />
-                <marker date="1531965795660" expanded="true" signature="15752:15837" ph="select distr... city" />
-                <marker date="1531965795660" expanded="true" signature="17575:17659" ph="select distr... city" />
+                <marker date="1531982590739" expanded="true" signature="1460:1501" ph="SELECT DISTI... todayweather" />
+                <marker date="1531982590739" expanded="true" signature="2513:2543" ph="SELECT DISTI... city" />
+                <marker date="1531982590739" expanded="true" signature="2688:2713" ph="SELECT distr... city" />
+                <marker date="1531982590739" expanded="true" signature="3109:3195" ph="insert into todayweather... " />
+                <marker date="1531982590739" expanded="true" signature="3233:3318" ph="insert into futureweather... " />
+                <marker date="1531982590739" expanded="true" signature="4287:4705" ph="insert into todayweather... " />
+                <marker date="1531982590739" expanded="true" signature="5712:6141" ph="insert into futureweather... " />
+                <marker date="1531982590739" expanded="true" signature="9861:9879" ph="select * fro... city" />
+                <marker date="1531982590739" expanded="true" signature="10514:10792" ph="insert into city... " />
+                <marker date="1531982590739" expanded="true" signature="11811:11845" ph="select DISTI... city" />
+                <marker date="1531982590739" expanded="true" signature="13297:13376" ph="select DISTI... city" />
+                <marker date="1531982590739" expanded="true" signature="13297:13387" ph="select DISTI... city" />
+                <marker date="1531982590739" expanded="true" signature="14742:14839" ph="select DISTI... city" />
+                <marker date="1531982590739" expanded="true" signature="16392:16477" ph="select distr... city" />
+                <marker date="1531982590739" expanded="true" signature="18215:18299" ph="select distr... city" />
               </folding>
             </state>
           </provider>
@@ -60,9 +63,12 @@
       <file leaf-file-name="FutureWeather.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bean/FutureWeather.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="218">
               <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,18 +76,18 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
+            <state relative-caret-position="560">
               <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JsonUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/JsonUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -92,7 +98,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
               <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding />
+              <folding>
+                <element signature="e#339#340#0" expanded="false" />
+                <element signature="e#367#368#0" expanded="false" />
+                <element signature="e#409#410#0" expanded="false" />
+                <element signature="e#443#444#0" expanded="false" />
+                <element signature="e#474#475#0" expanded="false" />
+                <element signature="e#501#502#0" expanded="false" />
+                <element signature="e#541#542#0" expanded="false" />
+                <element signature="e#573#574#0" expanded="false" />
+                <element signature="e#609#610#0" expanded="false" />
+                <element signature="e#641#642#0" expanded="false" />
+                <element signature="e#691#692#0" expanded="false" />
+                <element signature="e#733#734#0" expanded="false" />
+                <element signature="e#768#769#0" expanded="false" />
+                <element signature="e#799#800#0" expanded="false" />
+                <element signature="e#847#848#0" expanded="false" />
+                <element signature="e#887#888#0" expanded="false" />
+                <element signature="e#921#922#0" expanded="false" />
+                <element signature="e#951#952#0" expanded="false" />
+                <element signature="e#997#998#0" expanded="false" />
+                <element signature="e#1035#1036#0" expanded="false" />
+                <element signature="e#1070#1071#0" expanded="false" />
+                <element signature="e#1101#1102#0" expanded="false" />
+                <element signature="e#1149#1150#0" expanded="false" />
+                <element signature="e#1189#1190#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +150,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/entity/City.java" />
         <option value="$PROJECT_DIR$/src/main/java/bean/City.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/db/DBCon.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/utils/GsonUtil.java" />
@@ -133,8 +163,9 @@
         <option value="$PROJECT_DIR$/src/main/java/bean/CarBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/http/WeatherApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/DBOper.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ProduceGPS.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/DBOper.java" />
       </list>
     </option>
   </component>
@@ -166,6 +197,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,159 +236,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icbcWeatherApi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -859,12 +742,21 @@
       <workItem from="1531813170118" duration="370000" />
       <workItem from="1531900248570" duration="4191000" />
       <workItem from="1531965742360" duration="263000" />
-      <workItem from="1531968228207" duration="43000" />
+      <workItem from="1531968228207" duration="81000" />
+      <workItem from="1531969813933" duration="2560000" />
     </task>
+    <task id="LOCAL-00001" summary="delete unused class">
+      <created>1531968306919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531968306919</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67568000" />
+    <option name="totallyTimeSpent" value="70166000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,30 +774,30 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33486944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33486944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.49199083" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31164902" sideWeight="0.49199083" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4861111" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5138889" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -942,6 +834,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete unused class" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unused class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -997,19 +893,21 @@
         <state relative-caret-position="4655">
           <caret line="245" column="28" lean-forward="false" selection-start-line="245" selection-start-column="28" selection-end-line="245" selection-end-column="28" />
           <folding>
-            <marker date="1531965795660" expanded="true" signature="1483:1524" ph="SELECT DISTI... todayweather" />
-            <marker date="1531965795660" expanded="true" signature="2565:2595" ph="SELECT DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="2740:2765" ph="SELECT distr... city" />
-            <marker date="1531965795660" expanded="true" signature="4014:4463" ph="insert into todayweather... " />
-            <marker date="1531965795660" expanded="true" signature="5428:5889" ph="insert into futureweather... " />
-            <marker date="1531965795660" expanded="true" signature="9221:9239" ph="select * fro... city" />
-            <marker date="1531965795660" expanded="true" signature="9874:10152" ph="insert into city... " />
-            <marker date="1531965795660" expanded="true" signature="11171:11205" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12736" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12747" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="14102:14199" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="15752:15837" ph="select distr... city" />
-            <marker date="1531965795660" expanded="true" signature="17575:17659" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="1460:1501" ph="SELECT DISTI... todayweather" />
+            <marker date="1531982590739" expanded="true" signature="2513:2543" ph="SELECT DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="2688:2713" ph="SELECT distr... city" />
+            <marker date="1531982590739" expanded="true" signature="3109:3195" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="3233:3318" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="4287:4705" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="5712:6141" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="9861:9879" ph="select * fro... city" />
+            <marker date="1531982590739" expanded="true" signature="10514:10792" ph="insert into city... " />
+            <marker date="1531982590739" expanded="true" signature="11811:11845" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13376" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13387" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="14742:14839" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="16392:16477" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="18215:18299" ph="select distr... city" />
           </folding>
         </state>
       </provider>
@@ -1071,19 +969,21 @@
         <state relative-caret-position="4465">
           <caret line="245" column="28" lean-forward="true" selection-start-line="245" selection-start-column="28" selection-end-line="245" selection-end-column="28" />
           <folding>
-            <marker date="1531965795660" expanded="true" signature="1483:1524" ph="SELECT DISTI... todayweather" />
-            <marker date="1531965795660" expanded="true" signature="2565:2595" ph="SELECT DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="2740:2765" ph="SELECT distr... city" />
-            <marker date="1531965795660" expanded="true" signature="4014:4463" ph="insert into todayweather... " />
-            <marker date="1531965795660" expanded="true" signature="5428:5889" ph="insert into futureweather... " />
-            <marker date="1531965795660" expanded="true" signature="9221:9239" ph="select * fro... city" />
-            <marker date="1531965795660" expanded="true" signature="9874:10152" ph="insert into city... " />
-            <marker date="1531965795660" expanded="true" signature="11171:11205" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12736" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12747" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="14102:14199" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="15752:15837" ph="select distr... city" />
-            <marker date="1531965795660" expanded="true" signature="17575:17659" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="1460:1501" ph="SELECT DISTI... todayweather" />
+            <marker date="1531982590739" expanded="true" signature="2513:2543" ph="SELECT DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="2688:2713" ph="SELECT distr... city" />
+            <marker date="1531982590739" expanded="true" signature="3109:3195" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="3233:3318" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="4287:4705" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="5712:6141" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="9861:9879" ph="select * fro... city" />
+            <marker date="1531982590739" expanded="true" signature="10514:10792" ph="insert into city... " />
+            <marker date="1531982590739" expanded="true" signature="11811:11845" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13376" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13387" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="14742:14839" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="16392:16477" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="18215:18299" ph="select distr... city" />
           </folding>
         </state>
       </provider>
@@ -1124,19 +1024,21 @@
         <state relative-caret-position="627">
           <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding>
-            <marker date="1531965795660" expanded="true" signature="1483:1524" ph="SELECT DISTI... todayweather" />
-            <marker date="1531965795660" expanded="true" signature="2565:2595" ph="SELECT DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="2740:2765" ph="SELECT distr... city" />
-            <marker date="1531965795660" expanded="true" signature="4014:4463" ph="insert into todayweather... " />
-            <marker date="1531965795660" expanded="true" signature="5428:5889" ph="insert into futureweather... " />
-            <marker date="1531965795660" expanded="true" signature="9221:9239" ph="select * fro... city" />
-            <marker date="1531965795660" expanded="true" signature="9874:10152" ph="insert into city... " />
-            <marker date="1531965795660" expanded="true" signature="11171:11205" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12736" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12747" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="14102:14199" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="15752:15837" ph="select distr... city" />
-            <marker date="1531965795660" expanded="true" signature="17575:17659" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="1460:1501" ph="SELECT DISTI... todayweather" />
+            <marker date="1531982590739" expanded="true" signature="2513:2543" ph="SELECT DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="2688:2713" ph="SELECT distr... city" />
+            <marker date="1531982590739" expanded="true" signature="3109:3195" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="3233:3318" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="4287:4705" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="5712:6141" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="9861:9879" ph="select * fro... city" />
+            <marker date="1531982590739" expanded="true" signature="10514:10792" ph="insert into city... " />
+            <marker date="1531982590739" expanded="true" signature="11811:11845" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13376" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13387" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="14742:14839" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="16392:16477" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="18215:18299" ph="select distr... city" />
           </folding>
         </state>
       </provider>
@@ -1197,14 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/JsonObject.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1261,14 +1155,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bean/WeatherBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/bean/SK.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bean/FutureWeather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_102/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1312,10 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="579" column="60" lean-forward="false" selection-start-line="579" selection-start-column="60" selection-end-line="579" selection-end-column="60" />
-          <folding>
-            <element signature="e#23443#23444#0" expanded="false" />
-            <element signature="e#23515#23516#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,7 +1205,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#339#340#0" expanded="false" />
+            <element signature="e#367#368#0" expanded="false" />
+            <element signature="e#409#410#0" expanded="false" />
+            <element signature="e#443#444#0" expanded="false" />
+            <element signature="e#474#475#0" expanded="false" />
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#997#998#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+            <element signature="e#1070#1071#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1149#1150#0" expanded="false" />
+            <element signature="e#1189#1190#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1334,17 +1241,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ProduceGPS.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/FutureWeather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/http/WeatherApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
+        <state relative-caret-position="560">
           <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
+        <state relative-caret-position="560">
           <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
           <folding />
         </state>
@@ -1352,39 +1287,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/DBOper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="141">
+          <caret line="187" column="64" lean-forward="false" selection-start-line="187" selection-start-column="64" selection-end-line="187" selection-end-column="64" />
           <folding>
-            <marker date="1531965795660" expanded="true" signature="1483:1524" ph="SELECT DISTI... todayweather" />
-            <marker date="1531965795660" expanded="true" signature="2565:2595" ph="SELECT DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="2740:2765" ph="SELECT distr... city" />
-            <marker date="1531965795660" expanded="true" signature="4014:4463" ph="insert into todayweather... " />
-            <marker date="1531965795660" expanded="true" signature="5428:5889" ph="insert into futureweather... " />
-            <marker date="1531965795660" expanded="true" signature="9221:9239" ph="select * fro... city" />
-            <marker date="1531965795660" expanded="true" signature="9874:10152" ph="insert into city... " />
-            <marker date="1531965795660" expanded="true" signature="11171:11205" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12736" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="12657:12747" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="14102:14199" ph="select DISTI... city" />
-            <marker date="1531965795660" expanded="true" signature="15752:15837" ph="select distr... city" />
-            <marker date="1531965795660" expanded="true" signature="17575:17659" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="1460:1501" ph="SELECT DISTI... todayweather" />
+            <marker date="1531982590739" expanded="true" signature="2513:2543" ph="SELECT DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="2688:2713" ph="SELECT distr... city" />
+            <marker date="1531982590739" expanded="true" signature="3109:3195" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="3233:3318" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="4287:4705" ph="insert into todayweather... " />
+            <marker date="1531982590739" expanded="true" signature="5712:6141" ph="insert into futureweather... " />
+            <marker date="1531982590739" expanded="true" signature="9861:9879" ph="select * fro... city" />
+            <marker date="1531982590739" expanded="true" signature="10514:10792" ph="insert into city... " />
+            <marker date="1531982590739" expanded="true" signature="11811:11845" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13376" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="13297:13387" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="14742:14839" ph="select DISTI... city" />
+            <marker date="1531982590739" expanded="true" signature="16392:16477" ph="select distr... city" />
+            <marker date="1531982590739" expanded="true" signature="18215:18299" ph="select distr... city" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ProduceGPS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2793">
-          <caret line="151" column="55" lean-forward="false" selection-start-line="151" selection-start-column="55" selection-end-line="151" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
