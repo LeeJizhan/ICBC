@@ -93,6 +93,7 @@ public class DBOper {
             List<String> cities = new ArrayList<String>();
             cities.add("珠海");
             cities.add("北京");
+            cities.add("上海");
             cities.add("广州");
             cities.add("深圳");
             for (String c : cities) {
