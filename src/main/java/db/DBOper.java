@@ -70,7 +70,6 @@ public class DBOper {
         //判断数据库中是否含有当前天的天气信息，包括今天天气和未来天气数据
         while (resultSet.next()) {
             String daytime = resultSet.getString("daytime");
-            System.out.println(daytime + "  " + today);
             if (daytime.contains(today)) {
                 isUpdate = false;
                 break;
@@ -244,7 +243,7 @@ public class DBOper {
         /**
          * 将解析得到的Json数据保存到数据库
          * 1.连接数据库
-         * 2.创建Statement容器
+         * 2.创建PreparedStatement容器
          * 3.查询数据库数据
          * 4.若数据库为空，从网络上请求数据，插入数据；不为空，不操作
          * 5.遍历更新数据库，插入数据
@@ -256,16 +255,18 @@ public class DBOper {
         //1.连接数据库
 //        Connection connection = dbCon.getConnection();
         //2.创建Statement容器
-        Statement state = null;   //容器
+        PreparedStatement state = null;   //容器
         try {
-            state = connection.createStatement();
+            state = connection.prepareStatement("");
             //3.查询数据库数据
             String querySql = "select * from city";
             ResultSet rs = state.executeQuery(querySql);
+            String preSqlCity = "insert into city(id,province,city,district) values";
             //4.若数据库为空，从网络上请求数据，插入数据；不为空，不操作
             if (!rs.next()) {
                 //请求网络数据
                 cityResult = weatherApi.getCityResultFromNet();
+                StringBuilder sbCity = new StringBuilder();
                 //5.遍历更新数据库，插入数据
                 for (CityBean.Result result : cityResult) {
                     //5.1 获取值
@@ -274,15 +275,20 @@ public class DBOper {
                     String city = result.getCity();
                     String district = result.getDistrict();
                     //5.2 拼接sql语句
-                    String sql = "insert into city values("
+                    String sql = "("
                             + "\'" + id + "\'" + ","
                             + "\'" + province + "\'" + ","
                             + "\'" + city + "\'" + ","
                             + "\'" + district + "\'"
-                            + ")";   //SQL语句
-                    //5.3 执行sql语句
-                    state.executeUpdate(sql);
+                            + "),";   //SQL语句
+                    //5.3 添加sql语句
+                    sbCity.append(sql);
                 }
+                String citySql = preSqlCity + sbCity.substring(0, sbCity.length() - 1);
+                state.addBatch(citySql);
+                state.executeBatch();
+                connection.commit();
+                state.close();
             } else {
                 System.out.println("city表中已经存在数据.");
             }
@@ -355,10 +361,10 @@ public class DBOper {
          */
         //1.连接数据库
 //        Connection connection = dbCon.getConnection();
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
             //2.创建Statement容器
-            statement = connection.createStatement();
+            statement = connection.prepareStatement("");
             provinceList = getProvinceListFromDisk();
             //3.查询数据库数据
             for (String p : provinceList) {
@@ -402,10 +408,10 @@ public class DBOper {
          */
         //1.连接数据库
 //        Connection connection = dbCon.getConnection();
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
             //2.创建Statement容器
-            statement = connection.createStatement();
+            statement = connection.prepareStatement("");
             List<String> provinceList = getProvinceListFromDisk();
             if (province != null && provinceList.contains(province)) {
                 //3.查询数据库数据
@@ -449,10 +455,10 @@ public class DBOper {
          */
         //1.连接数据库
 //        Connection connection = dbCon.getConnection();
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
             //2.创建Statement容器
-            statement = connection.createStatement();
+            statement = connection.prepareStatement("");
             List<String> provinceList = getProvinceListFromDisk();
             //3.查询数据库数据
             for (String p : provinceList) {
@@ -501,7 +507,7 @@ public class DBOper {
          */
         //1.连接数据库
 //        Connection connection = dbCon.getConnection();
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
             List<String> provinceList = getProvinceListFromDisk();
             //3.查询数据库数据
@@ -512,7 +518,7 @@ public class DBOper {
                 }
             }
             //2.创建Statement容器
-            statement = connection.createStatement();
+            statement = connection.prepareStatement("");
 
             if (city != null && allCityList.contains(city)) {
                 //3.查询数据库数据
